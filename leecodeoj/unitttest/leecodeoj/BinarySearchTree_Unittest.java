@@ -90,4 +90,19 @@ public class BinarySearchTree_Unittest {
 		validateBST(node5, true);
 	}
 
+	@Test
+	public void ValidateBST_NotBST(){
+		TreeNode root = new TreeNode(10);
+		TreeNode node5 = new TreeNode(5);
+		TreeNode node15 = new TreeNode(15);
+		TreeNode node6 = new TreeNode(6);
+		TreeNode node20 = new TreeNode(20);
+		
+		root.left = node5;
+		root.right = node15;
+		node15.left = node6;
+		node15.right = node20;
+		
+		validateBST(root, false);
+	}
 }
