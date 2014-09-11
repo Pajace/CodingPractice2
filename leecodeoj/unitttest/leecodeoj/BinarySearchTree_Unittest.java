@@ -105,4 +105,11 @@ public class BinarySearchTree_Unittest {
 		
 		validateBST(root, false);
 	}
+	
+	@Test
+	public void ValidateBST_BSTWithOneNode(){
+		TreeNode root = new TreeNode(0);
+		
+		validateBST(root, true);
+	}
 }
