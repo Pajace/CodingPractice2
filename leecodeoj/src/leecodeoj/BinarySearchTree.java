@@ -6,10 +6,10 @@ import leecodeoj.share.TreeNode;
 
 public class BinarySearchTree {
 
-	public static boolean isValidBST(TreeNode node) {
+	public static boolean isValidBST(TreeNode root) {
 		
 		boolean isBST = true;
-//		TreeNode node = root;
+		TreeNode node = root;
 		Stack<TreeNode> parentStack = new Stack<TreeNode>();
 		int minValue = Integer.MIN_VALUE;
 		
@@ -19,7 +19,6 @@ public class BinarySearchTree {
 				node = node.left;
 			} else {
 				node = parentStack.pop();
-				System.out.print(node.val + ", ");
 				if (minValue >= node.val){
 					isBST = false;
 					break;
