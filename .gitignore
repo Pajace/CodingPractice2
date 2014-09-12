@@ -1,1 +1,2 @@
-/leecodeoj/
+*.class
+leecodeoj/bin/*
